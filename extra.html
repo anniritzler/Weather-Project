@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-3" id="current-day">Sunday</div>
+  <div class="col-3" id="current-month-date">Jan 7</div>
+  <div class="col-3" id="current-time">18:20</div>
+</div>
+
+<p>
+  <span id="current-day">Sunday</span>,
+  <span id="current-month-date">Jan </span>,
+  <span id="current-time">18:20</span>
+</p>
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFhrenheit); let celsiusLink =
+document.querySelector("#celsius-link"); celsiusLink.addEventListener("click",
+convertToCelsius); temperature = Number(temperature);
+temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
