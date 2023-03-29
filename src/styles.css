@@ -18,13 +18,13 @@ body {
   font-family: "EB Garamond", serif;
   font-weight: 400;
   border: solid rgba(231, 190, 231, 0.4);
-  border-width: 8px;
+  border-width: 5px;
   box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
 }
 
 h1 {
   color: #5a6275;
-  font-size: 60px;
+  font-size: 55px;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
 }
@@ -80,7 +80,7 @@ p {
 }
 
 .emoji-now {
-  font-size: 90px;
+  font-size: 70px;
 }
 
 .rain {
@@ -97,21 +97,21 @@ p {
   color: #5a6275;
 }
 
-.col-2 {
+.col-3 {
   color: rgb(185, 72, 185);
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .thedays {
   color: #5a6275;
   font-family: "DM Serif Display", serif;
-  max-width: 1000px;
-  margin: 50px auto;
+  max-width: 800px;
+  margin: 35px auto;
   background: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   border: dotted rgba(185, 195, 245, 0.4);
   border-width: 4px;
   box-shadow: 6px 4px 4px #f9dcd7;
