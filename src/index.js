@@ -40,6 +40,26 @@ todaysmonth.innerHTML = `${month} ${date}`;
 let todaystime = document.querySelector("#current-time");
 todaystime.innerHTML = `${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  const days = ["Monday", "Tuesday"];
+
+  forecastElement.innerHTML = `
+  <div class="row">
+         <div class="col">
+           Thursday <br />
+           ☀️
+           <br />
+           <div class="col degrees">
+             <span class="temp-max">5</span>° |
+             <span class="temp-min">3</span>°
+           </div>
+         </div>
+       </div>
+       `;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -109,3 +129,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Stockholm");
+displayForecast();
