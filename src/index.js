@@ -43,21 +43,30 @@ todaystime.innerHTML = `${hours}:${minutes}`;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  const days = ["Monday", "Tuesday"];
-
-  forecastElement.innerHTML = `
-  <div class="row">
-         <div class="col">
-           Thursday <br />
-           ☀️
-           <br />
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+         <div class="col"> <div class="weather-forecast-day">
+           ${day}</div>
+           <img
+           src="http://openweathermap.org/img/wn/50d@2x.png"
+           alt=""
+           width="42"
+           />
            <div class="col degrees">
              <span class="temp-max">5</span>° |
              <span class="temp-min">3</span>°
            </div>
          </div>
-       </div>
+       
        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayWeatherCondition(response) {
