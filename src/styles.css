@@ -83,6 +83,10 @@ p {
   font-size: 70px;
 }
 
+.rain-emoji {
+  width: 50px;
+}
+
 .rain {
   font-size: 20px;
   font-family: "DM Serif Display", serif;
@@ -104,7 +108,7 @@ p {
 
 .thedays {
   color: #5a6275;
-  opacity: 0.8;
+  opacity: 0.85;
   font-family: "DM Serif Display", serif;
   max-width: 800px;
   margin: 35px auto;
@@ -116,6 +120,10 @@ p {
   border: dotted rgba(185, 195, 245, 0.4);
   border-width: 4px;
   box-shadow: 5px 3px 3px rgb(88, 192, 173, 0.4);
+}
+
+.temp-max {
+  font-weight: bold;
 }
 
 .degrees {
