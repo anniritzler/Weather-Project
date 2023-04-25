@@ -41,24 +41,25 @@ let todaystime = document.querySelector("#current-time");
 todaystime.innerHTML = `${hours}:${minutes}`;
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
          <div class="col"> <div class="weather-forecast-day">
-           ${day}</div>
+           ${forecastDay.dt}</div>
            <img
-           src="http://openweathermap.org/img/wn/50d@2x.png"
+           src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
            alt=""
            width="42"
            />
            <div class="col degrees">
-             <span class="temp-max">5</span>° |
-             <span class="temp-min">3</span>°
+             <span class="temp-max">${forecastDay.temp.max}</span>° |
+             <span class="temp-min">${forecastDay.temp.min}</span>°
            </div>
          </div>
        `;
@@ -70,7 +71,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "de2c40e370d58e257faf07ba4ea95840";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
