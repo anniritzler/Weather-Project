@@ -138,5 +138,9 @@ p {
 footer {
   font-family: "DM Serif Display", serif;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
+}
+
+a {
+  color: #c85d3f;
 }
