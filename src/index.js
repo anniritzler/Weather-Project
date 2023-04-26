@@ -139,6 +139,12 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function clickCity(event) {
+  event.preventDefault();
+  let city = event.target.id;
+  searchCity(city);
+}
+
 function searchLocation(position) {
   let apiKey = "a6dcf296a7bc5180a9f85cbe8bc75e79";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -164,5 +170,17 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let nextCityOslo = document.querySelector("#oslo");
+nextCityOslo.addEventListener("click", clickCity);
+
+let nextCityLondon = document.querySelector("#london");
+nextCityLondon.addEventListener("click", clickCity);
+
+let nextCitySingapore = document.querySelector("#singapore");
+nextCitySingapore.addEventListener("click", clickCity);
+
+let nextCityNewYork = document.querySelector("#newyork");
+nextCityNewYork.addEventListener("click", clickCity);
 
 searchCity("Stockholm");
