@@ -128,6 +128,7 @@ function displayWeatherCondition(response) {
 }
 
 function searchCity(city) {
+  city = city.replace("-", "%20");
   let apiKey = "a6dcf296a7bc5180a9f85cbe8bc75e79";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -180,7 +181,7 @@ nextCityLondon.addEventListener("click", clickCity);
 let nextCitySingapore = document.querySelector("#singapore");
 nextCitySingapore.addEventListener("click", clickCity);
 
-let nextCityNewYork = document.querySelector("#newyork");
+let nextCityNewYork = document.querySelector("#new-york");
 nextCityNewYork.addEventListener("click", clickCity);
 
 searchCity("Stockholm");
